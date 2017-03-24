@@ -9,6 +9,20 @@
   "bin": {
     "mylserver": "./index.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "nate-river",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nate-river/mylserver.git"
+  },
+  "keywords": [
+    "static",
+    "web",
+    "server",
+    "content"
+  ],
+  "bugs": {
+    "url": "https://github.com/nate-river/mylserver/issues"
+  },
+  "homepage": "https://github.com/nate-river/mylserver#readme"
 }
