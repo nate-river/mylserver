@@ -72,7 +72,7 @@ server.on('request', (req, res)=> {
 
   if (!fs.existsSync(staticFilePath)) {
     if (req.url === '/favicon.ico') {
-      fs.createReadStream(staticFilePath).pipe(res);
+      fs.createReadStream(path.resolve(__dirname, 'favicon.ico')).pipe(res);
     } else {
       res.writeHead(404, 'not found');
       res.end();
