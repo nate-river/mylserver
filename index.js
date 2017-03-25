@@ -66,14 +66,14 @@ const contentTypeDict = {
   ".7z": "application/x-7z-compressed"
 };
 server.on('request', (req, res)=> {
-  if (req.url === '/favicon.ico') {
-    res.end();
-    return;
-  }
   const url = req.url.replace(/\?.*/, '');
   const staticFilePath = path.resolve('.' + decodeURIComponent(url));
 
+
   if (!fs.existsSync(staticFilePath)) {
+    if (req.url === '/favicon.ico') {
+
+    }
     res.writeHead(404, 'not found');
     res.end();
     return;
