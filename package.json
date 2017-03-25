@@ -1,6 +1,6 @@
 {
   "name": "mylserver",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "yet other http satic server.",
   "main": "index.js",
   "scripts": {
