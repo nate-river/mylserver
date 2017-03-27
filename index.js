@@ -83,12 +83,12 @@ server.on('request', (req, res)=> {
   const indexFile = path.resolve(staticFilePath, 'index.html');
 
   // response index.html if exist
-  if (fs.existsSync(indexFile)) {
-    res.writeHead(200, {
-      'Content-Type': 'text/html'
-    });
-    fs.createReadStream(indexFile).pipe(res)
-  } else {
+  // if (fs.existsSync(indexFile)) {
+  //   res.writeHead(200, {
+  //     'Content-Type': 'text/html'
+  //   });
+  //   fs.createReadStream(indexFile).pipe(res)
+  // } else {
     // response directory info
     if (fs.lstatSync(staticFilePath).isDirectory()) {
       var files = fs.readdirSync(staticFilePath);
@@ -123,7 +123,7 @@ server.on('request', (req, res)=> {
         res.end();
       }
     }
-  }
+  // }
 });
 
 server.listen(18088, ()=> {
